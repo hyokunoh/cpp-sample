@@ -12,7 +12,7 @@ pool:
 variables:
   solution: '**/*.sln'
   # buildPlatform: 'Any CPU'
-  buildPlatform: 'x64'
+  # buildPlatform: 'x64'
   buildConfiguration: 'Release'
 
 steps:
@@ -25,10 +25,10 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    platform: '$(buildPlatform)'
+    # platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
   inputs:
-    platform: '$(buildPlatform)'
+    # platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
